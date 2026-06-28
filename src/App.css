@@ -42,6 +42,40 @@
   margin-top: 1px;
 }
 
+.app-header__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  color: var(--md-on-surface-dim);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.btn-theme:hover {
+  background: var(--md-surface-variant);
+  color: var(--md-on-surface);
+}
+
+.btn-theme:active {
+  transform: scale(0.95);
+}
+
+.btn-theme svg {
+  width: 20px;
+  height: 20px;
+}
+
 .app-header__hint {
   display: flex;
   align-items: center;
@@ -240,7 +274,8 @@ select option {
 }
 
 .cat-tab--active:hover {
-  background: #c4d8fc;
+  background: var(--md-primary-container);
+  filter: brightness(0.95);
 }
 
 .cat-tab__count {
@@ -357,7 +392,8 @@ select option {
 }
 
 .btn-copy:hover {
-  background: #c4d8fc;
+  background: var(--md-primary-container);
+  color: var(--md-on-primary-cnt);
 }
 
 .btn-copy:active {

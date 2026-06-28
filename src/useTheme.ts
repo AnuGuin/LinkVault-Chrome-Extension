@@ -28,15 +28,21 @@ async function saveTheme(theme: Theme): Promise<void> {
 
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>('light');
+  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    readTheme().then(setTheme);
+    readTheme().then((saved) => {
+      setTheme(saved);
+      setIsInitialized(true);
+      document.documentElement.setAttribute('data-theme', saved);
+    });
   }, []);
 
   useEffect(() => {
+    if (!isInitialized) return;
     document.documentElement.setAttribute('data-theme', theme);
     saveTheme(theme);
-  }, [theme]);
+  }, [theme, isInitialized]);
 
   const toggleTheme = () => setTheme((t) => (t === 'light' ? 'dark' : 'light'));
 
