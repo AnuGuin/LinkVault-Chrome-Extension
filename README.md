@@ -99,5 +99,5 @@ Since LinkVault is in local development and not yet published on the Chrome Web 
 
 - **Framework**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - **Build Tool**: [Vite 8](https://vite.dev/)
-- **Styles**: Vanilla CSS with modern custom properties and Material Design design system tokens.
+- **Styles**: Tailwind CSS with modern custom properties and Material Design design system tokens.
 - **Chrome Extension Platform**: Manifest V3
