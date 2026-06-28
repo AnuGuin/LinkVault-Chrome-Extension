@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Google+Sans:wght@400;500;700&display=swap');
+
+:root {
+  --md-primary: #1a73e8;
+  --md-primary-dark: #1557b0;
+  --md-primary-container: #d3e3fd;
+  --md-on-primary: #ffffff;
+  --md-on-primary-cnt: #041e49;
+
+  --md-bg: #f8f9fa;
+  --md-surface: #ffffff;
+  --md-surface-variant: #f1f3f4;
+  --md-surface-tonal: #e8f0fe;
+
+  --md-outline: #dadce0;
+  --md-outline-variant: #e8eaed;
+
+  --md-on-bg: #202124;
+  --md-on-surface: #3c4043;
+  --md-on-surface-dim: #5f6368;
+  --md-on-surface-muted: #9aa0a6;
+
+  --md-error: #d93025;
+  --md-success: #137333;
+  --md-success-container: #e6f4ea;
+
+  --cat-job: #e8710a;
+  --cat-social: #9334e6;
+  --cat-repo: #0f9d58;
+  --cat-other: #1a73e8;
+
+  --cat-job-bg: #fce8b2;
+  --cat-social-bg: #e8d5fb;
+  --cat-repo-bg: #ceead6;
+  --cat-other-bg: #d3e3fd;
+
+  --md-radius-sm: 4px;
+  --md-radius: 8px;
+  --md-radius-lg: 16px;
+  --md-radius-xl: 24px;
+
+  --elev-1: 0 1px 2px rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+  --elev-2: 0 1px 2px rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
+  --elev-3: 0 4px 8px 3px rgba(60, 64, 67, .15), 0 1px 3px rgba(60, 64, 67, .3);
+
+  --transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 400px;
+  min-height: 500px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  width: 400px;
+  min-height: 500px;
+  margin: 0;
+  padding: 0;
+  background: var(--md-bg, #f8f9fa);
+  overflow-x: hidden;
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-size: 14px;
+  color: var(--md-on-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 400px;
+  min-height: 500px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--md-outline);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-on-surface-muted);
+}

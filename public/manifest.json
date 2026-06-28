@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "LinkVault – Job Hunt Link Saver",
+  "version": "1.0.0",
+  "description": "Instantly save, copy, and insert job-hunt links with keyboard shortcuts and context menus.",
+  "icons": {
+    "16": "logo.png",
+    "32": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "LinkVault",
+    "default_icon": "logo.png"
+  },
+  "permissions": [
+    "storage",
+    "clipboardWrite",
+    "contextMenus",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+L"
+      },
+      "description": "Open LinkVault popup"
+    }
+  }
+}
